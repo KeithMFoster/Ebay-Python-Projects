@@ -1,0 +1,7 @@
+Content <?xml version='1.0' encoding='UTF-8'?><createUploadJobResponse xmlns="http://www.ebay.com/marketplace/services"><ack>Failure</ack><errorMessage><error><errorId>7</errorId><domain>Marketplace</domain><severity>Error</severity><category>Application</category><message>Maximum of one job per job-type in non-terminated state is allowed</message><subdomain>BulkDataExchange</subdomain></error></errorMessage><version>1.5.0</version><timestamp>2016-11-19T09:03:58.648Z</timestamp></createUploadJobResponse>
+Traceback (most recent call last):
+  File "./update_all_inventory.py", line 25, in <module>
+    response = api.create_upload_job_for_revise_fixed_price_item(upload_job_type)
+  File "/home/paul/myprojects/new_ebay/ebay_api/ebay_api.py", line 193, in create_upload_job_for_revise_fixed_price_item
+    job_id = root.find('services:jobId', nsmap).text
+AttributeError: 'NoneType' object has no attribute 'text'
